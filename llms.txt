@@ -6,8 +6,8 @@
 - Email: rodrigogtz04@gmail.com
 - LinkedIn: https://www.linkedin.com/in/rodrigo-gutierrez-87b02a250
 - GitHub: https://github.com/Rogupe
-- CV (Manufacturing): https://www.rodrigogutierrez.info/cv-manufacturing.pdf
-- CV (Supply Chain): https://www.rodrigogutierrez.info/cv-supplychain.pdf
+- CV (Manufacturing): https://www.rodrigogutierrez.info/cvmanufacturing.pdf
+- CV (Supply Chain): https://www.rodrigogutierrez.info/cvsupplychain.pdf
 
 ## Highlights
 
