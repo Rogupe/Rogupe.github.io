@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.rodrigogutierrez.info/</loc>
     <lastmod>2026-08-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.rodrigogutierrez.info/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.rodrigogutierrez.info/es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.rodrigogutierrez.info/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.rodrigogutierrez.info/de.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rodrigogutierrez.info/"/>
   </url>
+  <url><loc>https://www.rodrigogutierrez.info/es.html</loc><lastmod>2026-08-19</lastmod></url>
+  <url><loc>https://www.rodrigogutierrez.info/fr.html</loc><lastmod>2026-08-19</lastmod></url>
+  <url><loc>https://www.rodrigogutierrez.info/de.html</loc><lastmod>2026-08-19</lastmod></url>
 </urlset>
