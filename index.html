@@ -120,7 +120,13 @@
     display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.12em;color:#fff;
     background:var(--red);border-radius:4px;padding:2px 7px;margin-left:10px;vertical-align:2px;
   }
-  @media (max-width:640px){.frow{grid-template-columns:1fr 24px}.frow .fd{order:-1}.frow .ftag{display:none}}
+  @media (max-width:640px){
+    .frow{grid-template-columns:1fr;row-gap:3px;padding:16px 2px;align-items:start}
+    .frow .fd{order:-1;font-size:11px}
+    .frow .ft{font-size:17px;line-height:1.28}
+    .frow .ftag{display:none}
+    .frow .arr{display:none}
+  }
 
   /* ---------- selected works (big rows) ---------- */
   .work{margin-bottom:clamp(56px,8vw,96px);cursor:pointer}
