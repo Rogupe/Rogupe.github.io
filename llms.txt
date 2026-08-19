@@ -1,0 +1,73 @@
+# Rodrigo Gutiérrez Peña — Mechatronics Engineer & Supply Chain Analyst
+
+> Mechatronics engineer (B.Sc., Tecnológico de Monterrey, expected Dec 2026) and MSc candidate in Logistics & Supply Chain Management (University of Hull, UK, expected Jan 2027). Focus: robotics, industrial automation, computer vision, AI-integrated digital twins and Power BI analytics. Available from January 2027; open to relocation — US (TN-visa eligible) and Europe. Languages: Spanish (native), English (fluent), German (B2), French (B1, certified).
+
+- Site: https://www.rodrigogutierrez.info/
+- Email: rodrigogtz04@gmail.com
+- LinkedIn: https://www.linkedin.com/in/rodrigo-gutierrez-87b02a250
+- GitHub: https://github.com/Rogupe
+- CV (Manufacturing): https://www.rodrigogutierrez.info/cv-manufacturing.pdf
+- CV (Supply Chain): https://www.rodrigogutierrez.info/cv-supplychain.pdf
+
+## Highlights
+
+- MSc dissertation: AI-integrated digital twin for an automotive Tier 1 export supply chain — GRU neural-network demand forecasting + NSGA-II multi-objective optimisation, human-in-the-loop; full Python pipeline on 500+ real order records across SCOR blocks; 98.5% baseline delivery performance; Pareto-front trade-off analysis.
+- Design Lead at Green Tech Innovation (GTI): founded the Speed Prototyping team for the XPRIZE Wildfire entry; four flying proof-of-concept drones; technical excellence award at ExpoIngenierías Tec de Monterrey.
+- Engineering intern at Magna CIMS (Tier 1 automotive): validated a 3D-scanning / photogrammetry proof of concept for in-plant quality control.
+- Research assistant at CINVESTAV: RGB-D and point-cloud vision for robotic perception.
+- 2× World Championship qualifier: VEX U (programmer & electrician) and FIRST Robotics Competition (programming & electrical mentor, Team Blue Ignition).
+- Learned German to B2 in six months, then taught it.
+
+## Education
+
+- B.Sc. Mechatronics Engineering — Tecnológico de Monterrey, Mexico (expected December 2026)
+- M.Sc. Logistics and Supply Chain Management — University of Hull, UK (expected January 2027) — Course Representative; Certificate of Recognition, Hull University Business School
+- Automotive Engineering Program — Steinbeis Transfer Center, Hochschule Esslingen, Germany (February 2025)
+
+## Projects (27)
+
+### Data & Supply Chain
+
+- AI-Integrated Digital Twin for an Automotive Export Supply Chain — MSc Dissertation (2026, University of Hull, UK): GRU demand forecasting + NSGA-II multi-objective optimisation on 500+ real export orders, under a human-in-the-loop framework.
+- NHS Organ Donation — Power BI Analysis (2026, University of Hull — NHSBT coursework): 5-page Power BI report treating organs as the ultimate last-mile logistics problem — 10 years of NHSBT data, cold-chain CIT risk included.
+- Supply Chain Analytics Dashboard — Power BI (Programmatic PBIR) (2026, University of Hull, UK): End-to-end supply chain performance dashboard with the data model and report built programmatically in PBIR / JSON.
+- Import Strategy — Maize Flour into a UK Retail Distribution Centre (2026, University of Hull, UK): End-to-end import strategy into Tesco's Humber DC: sourcing, international routing and UK import compliance.
+
+### Industry & Research
+
+- 3D Scanning Rig Prototype for Quality Control – Magna CIMS (Apr – Jun 2025, Ramos Arizpe, MX): Point-cloud scanning rig that makes geometric inspection faster and more accessible on a Tier 1 automotive production floor.
+- RGB-D & Point Cloud Vision Systems – Research at CINVESTAV (Feb – Mar 2025, Ramos Arizpe, MX): Computer-vision research on depth data and spatial reconstruction for robotic perception and scene understanding.
+- Team Romeo – Wildfire-Response Drones, Design Lead (GTI / XPRIZE) (Jun 2024 – Aug 2025, Saltillo · Monterrey, MX): Founded and led GTI's Speed Prototyping team: four flying proof-of-concept drones for the XPRIZE Wildfire entry.
+- Automated Gripper Design for KUKA Robotic Arm – GecVac (Sep – Dec 2024, Saltillo, MX): Conceptual and functional gripper prototype for a KUKA arm — simulated in KUKA.Sim, built with additive manufacturing.
+- Automated Transport Cart Concept for Polsa (Aug 2024, Saltillo, MX): SolidWorks-designed automated cart in PTR steel, driven by a Raspberry Pi Pico through gears and chains.
+
+### Competitions & Leadership
+
+- VEX U – Robotics Programmer & Electrician (Tec de Monterrey) (Apr 2024, Dallas, TX — Worlds): Programmer & electrician for a season that ended at the VEX Robotics World Championship.
+- FRC – Blue Ignition Programmer & Mentor (Apr 2023, Houston, TX — Worlds): From programmer to mentor: Java control systems and coaching that helped the team reach the FRC World Championship.
+- Gravity Racer – Borregos Racing, Pilot & Mechanic (2nd Place) (May 2024, Coahuila, MX): Pilot AND mechanic of a precision-machined downhill racer that took 2nd place regionally on speed and structural integrity.
+- Peer Mentoring Program – Student Support & Guidance (Aug 2023, Saltillo, MX): Certified peer mentor providing one-on-one support, psychological first aid and structured follow-ups for first-year students.
+
+### University Projects
+
+- Self-Stabilizing Rolling Sphere (Nov 2024, Saltillo, MX): Spherical robot with MPU6050-based internal motion control — full CAD, 3D printing and embedded Python.
+- Humanoid Motion Mimicry with Dynamixel Robot (Mar 2025, Saltillo, MX): One-week TEC21 challenge: programming a Dynamixel humanoid to mimic human movements like jumps and lateral slides.
+- Automated Industrial Blind Prototype (Mar 2024, Saltillo, MX): Arduino-controlled blind with ultrasonic position sensing, LCD feedback and an emergency-stop safety system.
+- Laser-Cut Wooden Can Crusher (Apr 2024, Saltillo, MX): Functional can crusher rebuilt in SolidWorks and manufactured entirely with laser-cut interlocking wood parts.
+- Cardboard Chair for Visually Impaired Children (Nov 2023, Saltillo, MX): Inclusive, eco-friendly cardboard chair — iterated through structural testing on a universal testing machine.
+- Three-Way Speaker System with Passive Crossover Filter (Apr 2023, Saltillo, MX): LC crossover filter splitting lows, mids and highs to dedicated drivers — simulated, then built and tuned by hand.
+- Custom-Built BLDC Motor Prototype (Jun 2023, Saltillo, MX): Hand-wound coils, 3D-printed stator and controller wiring — a deep dive into motor design and electromagnetics.
+- Conceptual Sea Bin for SDG-Inspired Water Cleanup (Aug 2024, Saltillo, MX): Floating waste-collection prototype with a pump-driven suction cycle, aligned with the UN Sustainable Development Goals.
+- Multi-Level Water Leveling System with Energy Recovery (Nov 2022, Saltillo, MX): Bernoulli-inspired water system with precision-cut wood levels and a small generator recovering energy from the flow.
+- PVC Underwater ROV for Task Execution (Oct 2022, Saltillo, MX): Tethered underwater ROV in waterproofed PVC, driven through three-state toggle controls for pool task missions.
+- PISA Exam Practice Interface in Python (Oct 2022, Saltillo, MX): Interactive Python GUI built from scratch — canvas rendering, event handling and question logic for exam practice.
+
+### Languages & Education
+
+- German – B2 in 6 Months & Teaching Experience (Aug 2024, Saltillo, MX): Reached B2 German in six months, then taught it — proof of fast, deep learning.
+- French – B1 Immersive Program, Voxea Swiss Academy (2019 – 2022, Switzerland (online)): Conversational French built through high school and certified at B1 via an immersive Swiss winter program.
+- Automotive Engineering Course – Steinbeis Transfer Center (STiAE) (Jan 2024, Esslingen, Germany): Specialized automotive engineering training in Germany — vehicle systems, design principles and advanced technologies.
+
+## Skills
+
+CAD & simulation: SolidWorks, Autodesk Fusion 360, Ansys, KUKA.Sim. Automation & controls: KUKA KRC5, Siemens TIA Portal, Raspberry Pi, Arduino, control systems integration. Manufacturing: additive manufacturing, rapid prototyping, laser cutting, photogrammetry / 3D scanning. Data & supply chain: Python (pandas, GRU neural networks), Power BI (incl. programmatic PBIR), DAX, NSGA-II optimisation, SCOR framework, digital twins, MATLAB, C++, Java, Excel.
