@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rodrigo Gutiérrez Peña — Mechatronics engineer. Robotics, computer vision, industrial automation and data analytics. 23+ engineering projects, 2× world championship qualifier.">
+<meta property="og:title" content="Rodrigo Gutiérrez Peña — Mechatronics & Robotics">
+<meta property="og:description" content="Robotics · Computer Vision · Automation · Data. Selected engineering work 2022–2026.">
+<link rel="preconnect" href="https://static.wixstatic.com">
+<title>Rodrigo Gutiérrez Peña — Mechatronics · Robotics · Data</title>
+<style>
+  :root{
+    --bg:#0B0809; --surface:#141011; --surface2:#1A1517;
+    --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
+    --ink:#F5F2F3; --muted:#A69DA2; --faint:#6E6569;
+    --red:#C8102E; --red-br:#E8264A;
+    --amber:#FCB418; --sky:#3CB4E4; --rose:#F27DA0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{transition:none!important;animation:none!important}}
+  body{
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Inter",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--red);color:#fff}
+  ::-webkit-scrollbar{width:10px}
+  ::-webkit-scrollbar-track{background:var(--bg)}
+  ::-webkit-scrollbar-thumb{background:#2A2225;border-radius:8px}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+  section{padding:clamp(64px,9vw,120px) 0}
+
+  /* ---------- section labels (biipmk style) ---------- */
+  .slabel{
+    display:flex;align-items:baseline;gap:14px;margin-bottom:clamp(28px,4vw,48px);
+    border-top:1px solid var(--line);padding-top:18px;
+  }
+  .slabel .idx{font-size:12px;font-weight:700;color:var(--red-br);letter-spacing:.06em}
+  .slabel .name{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+  .slabel .hint{margin-left:auto;font-size:11.5px;color:var(--faint);letter-spacing:.04em}
+
+  /* ---------- nav ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(11,8,9,.82);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;height:60px;gap:24px;font-size:13px}
+  .brand{font-weight:800;letter-spacing:.02em;white-space:nowrap}
+  .brand em{font-style:normal;color:var(--red-br)}
+  .nav .links{display:flex;gap:22px;margin-left:auto}
+  .nav .links a{color:var(--muted);font-weight:600;transition:color .15s ease;position:relative}
+  .nav .links a:hover,.nav .links a.active{color:var(--ink)}
+  .nav .links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--red)}
+  .nav .meta{display:flex;gap:16px;color:var(--faint);font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
+  @media (max-width:820px){.nav .meta{display:none}.nav .links{gap:16px}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(120px,16vw,190px) 0 clamp(56px,7vw,90px)}
+  .hero .kicker{font-size:13px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--red-br);margin-bottom:22px}
+  h1{
+    font-size:clamp(44px,8.6vw,116px);line-height:.98;letter-spacing:-.03em;font-weight:800;
+    text-transform:uppercase;margin-bottom:30px;
+  }
+  h1 .thin{color:var(--muted);font-weight:300}
+  .hero .sub{max-width:560px;font-size:clamp(15px,1.4vw,17px);color:var(--muted);margin-bottom:34px}
+  .hero .sub b{color:var(--ink);font-weight:600}
+  .hero .hrow{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:13px 26px;border-radius:999px;font-weight:700;font-size:14px;
+    background:var(--ink);color:var(--bg);transition:all .18s ease;letter-spacing:.01em;
+  }
+  .btn:hover{background:var(--red);color:#fff;transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line2)}
+  .btn.ghost:hover{border-color:var(--red);color:var(--red-br);background:transparent}
+  .scrolldown{font-size:12px;color:var(--faint);letter-spacing:.14em;text-transform:uppercase}
+  .heromarks{display:flex;gap:clamp(24px,5vw,64px);margin-top:clamp(48px,6vw,72px);flex-wrap:wrap}
+  .hm{border-left:1px solid var(--line);padding-left:16px}
+  .hm .n{font-size:clamp(22px,2.6vw,32px);font-weight:800;letter-spacing:-.01em}
+  .hm .l{font-size:11.5px;color:var(--faint);letter-spacing:.06em;text-transform:uppercase}
+
+  /* ---------- latest (updatable feed) ---------- */
+  .feed{border-top:1px solid var(--line)}
+  .frow{
+    display:grid;grid-template-columns:110px 1fr auto 24px;gap:18px;align-items:center;
+    padding:20px 4px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .15s ease, padding .15s ease;
+  }
+  .frow:hover{background:var(--surface);padding-left:14px;padding-right:14px}
+  .frow .fd{font-size:12px;color:var(--faint);font-variant-numeric:tabular-nums;letter-spacing:.04em}
+  .frow .ft{font-size:clamp(16px,1.8vw,20px);font-weight:700;letter-spacing:-.01em}
+  .frow .ftag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .frow .arr{color:var(--faint);transition:transform .15s ease,color .15s ease;font-size:16px}
+  .frow:hover .arr{transform:translateX(4px);color:var(--red-br)}
+  .badge-new{
+    display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.12em;color:#fff;
+    background:var(--red);border-radius:4px;padding:2px 7px;margin-left:10px;vertical-align:2px;
+  }
+  @media (max-width:640px){.frow{grid-template-columns:1fr 24px}.frow .fd{order:-1}.frow .ftag{display:none}}
+
+  /* ---------- selected works (big rows) ---------- */
+  .work{margin-bottom:clamp(56px,8vw,96px);cursor:pointer}
+  .work:last-child{margin-bottom:0}
+  .work .wim{
+    position:relative;overflow:hidden;border-radius:6px;background:var(--surface);
+    aspect-ratio:16/8.5;
+  }
+  .work .wim img{
+    width:100%;height:100%;object-fit:cover;
+    filter:grayscale(1) contrast(1.05) brightness(.88);
+    transition:filter .5s ease, transform .8s cubic-bezier(.2,.6,.2,1);
+  }
+  .work .wim::after{
+    content:"";position:absolute;inset:0;mix-blend-mode:multiply;pointer-events:none;
+    background:linear-gradient(160deg,rgba(200,16,46,.30),rgba(11,8,9,.45));
+    transition:opacity .5s ease;
+  }
+  .work:hover .wim img{filter:none;transform:scale(1.025)}
+  .work:hover .wim::after{opacity:.12}
+  .work .wnum{
+    position:absolute;top:18px;left:20px;z-index:2;font-size:12px;font-weight:700;
+    color:#fff;letter-spacing:.1em;opacity:.85;
+  }
+  .work .wbar{display:flex;align-items:baseline;gap:18px;margin-top:16px;flex-wrap:wrap}
+  .work .wtitle{font-size:clamp(20px,2.6vw,30px);font-weight:800;letter-spacing:-.015em}
+  .work .wyear{font-size:13px;color:var(--red-br);font-weight:700;font-variant-numeric:tabular-nums}
+  .work .wmeta{width:100%;font-size:13px;color:var(--faint);letter-spacing:.02em}
+  .work:hover .wtitle{color:#fff}
+  .works-cta{margin-top:40px;text-align:center}
+
+  /* ---------- all projects grid ---------- */
+  .filters{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:32px;border-bottom:1px solid var(--line);padding-bottom:14px}
+  .fchip{
+    background:none;border:none;cursor:pointer;font-size:13px;font-weight:700;color:var(--faint);
+    letter-spacing:.03em;padding:2px 0;position:relative;transition:color .15s ease;
+  }
+  .fchip .n{font-size:10px;vertical-align:6px;margin-left:3px;color:var(--faint)}
+  .fchip:hover{color:var(--ink)}
+  .fchip.on{color:var(--ink)}
+  .fchip.on::after{content:"";position:absolute;left:0;right:0;bottom:-15px;height:2px;background:var(--red)}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 20px}
+  .pcard{cursor:pointer}
+  .pcard .im{position:relative;overflow:hidden;border-radius:5px;aspect-ratio:4/2.9;background:var(--surface)}
+  .pcard .im img{
+    width:100%;height:100%;object-fit:cover;
+    filter:grayscale(1) brightness(.85);transition:filter .4s ease, transform .6s ease;
+  }
+  .pcard .im::after{
+    content:"";position:absolute;inset:0;mix-blend-mode:multiply;pointer-events:none;
+    background:linear-gradient(160deg,rgba(200,16,46,.28),rgba(11,8,9,.4));transition:opacity .4s ease;
+  }
+  .pcard:hover .im img{filter:none;transform:scale(1.04)}
+  .pcard:hover .im::after{opacity:.15}
+  .pcard .im .ph{height:100%;display:grid;place-items:center;font-size:26px;color:var(--faint)}
+  .pcard h3{font-size:14.5px;font-weight:700;line-height:1.35;margin:12px 0 3px;letter-spacing:-.005em}
+  .pcard:hover h3{color:#fff}
+  .pcard .meta{font-size:11.5px;color:var(--faint);letter-spacing:.03em}
+  .pcard .meta i{font-style:normal;color:var(--red-br);font-weight:700}
+  @media (max-width:900px){.pgrid{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.pgrid{grid-template-columns:1fr}}
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(32px,5vw,72px);align-items:start}
+  .about p{font-size:clamp(16px,1.6vw,19px);color:var(--muted);margin-bottom:18px;max-width:640px}
+  .about p b{color:var(--ink);font-weight:600}
+  .aphoto{position:relative;border-radius:6px;overflow:hidden}
+  .aphoto img{width:100%;aspect-ratio:3/3.8;object-fit:cover;filter:grayscale(1) brightness(.9);transition:filter .5s ease}
+  .aphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(200,16,46,.3),rgba(11,8,9,.4));mix-blend-mode:multiply;transition:opacity .5s ease}
+  .aphoto:hover img{filter:none}
+  .aphoto:hover::after{opacity:.12}
+  .facts{margin-top:34px;display:grid;gap:0;border-top:1px solid var(--line)}
+  .fact{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:13px 2px;border-bottom:1px solid var(--line);font-size:14px}
+  .fact .k{color:var(--faint);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding-top:2px}
+  .fact .v{color:var(--muted)}
+  .fact .v b{color:var(--ink);font-weight:600}
+  @media (max-width:820px){.about-grid{grid-template-columns:1fr}.aphoto{max-width:340px}}
+
+  /* ---------- contact / footer ---------- */
+  .contact{padding-bottom:0}
+  .bigmail{
+    display:block;font-size:clamp(26px,4.6vw,58px);font-weight:800;letter-spacing:-.02em;
+    margin:18px 0 30px;transition:color .2s ease;word-break:break-all;
+  }
+  .bigmail:hover{color:var(--red-br)}
+  .contact .socials{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:clamp(56px,8vw,90px)}
+  .schip{
+    padding:10px 20px;border:1px solid var(--line2);border-radius:999px;font-size:13px;font-weight:700;
+    color:var(--muted);transition:all .18s ease;
+  }
+  .schip:hover{border-color:var(--red);color:var(--ink)}
+  .foot{
+    border-top:1px solid var(--line);padding:26px 0 34px;
+    display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+    font-size:12px;color:var(--faint);font-variant-numeric:tabular-nums;
+  }
+  .foot a:hover{color:var(--ink)}
+  .wordmark{
+    font-size:clamp(60px,14vw,190px);font-weight:800;letter-spacing:-.04em;line-height:1;
+    text-transform:uppercase;color:var(--surface2);user-select:none;text-align:center;
+    margin-top:clamp(40px,6vw,70px);
+  }
+
+  /* ---------- modal ---------- */
+  .overlay{
+    position:fixed;inset:0;background:rgba(6,4,5,.86);z-index:100;display:none;
+    align-items:flex-start;justify-content:center;padding:36px 18px;overflow-y:auto;backdrop-filter:blur(6px);
+  }
+  .overlay.open{display:flex}
+  .modal-wrap{position:relative;max-width:800px;width:100%}
+  .modal{
+    background:var(--surface);border:1px solid var(--line2);border-radius:10px;overflow:hidden;
+    box-shadow:0 40px 90px rgba(0,0,0,.6);animation:pop .22s ease;
+  }
+  @keyframes pop{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+  .modal .mim{max-height:380px;overflow:hidden;background:#000}
+  .modal .mim img{width:100%;height:380px;object-fit:cover}
+  .modal .mbd{padding:28px 32px 32px}
+  .modal .gline{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--red-br);margin-bottom:8px}
+  .modal h3{font-size:24px;line-height:1.2;letter-spacing:-.015em;margin-bottom:10px}
+  .mmeta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .tag{
+    font-size:12px;font-weight:600;color:var(--muted);background:var(--surface2);
+    border:1px solid var(--line);padding:5px 12px;border-radius:6px;
+  }
+  .modal p{color:var(--muted);font-size:14.5px;margin-bottom:13px}
+  .mclose{
+    position:absolute;top:-14px;right:-8px;width:38px;height:38px;border-radius:50%;z-index:2;
+    background:var(--red);border:none;font-size:16px;cursor:pointer;color:#fff;font-weight:800;
+    box-shadow:0 8px 26px rgba(200,16,46,.5);display:grid;place-items:center;
+  }
+  .mclose:hover{background:var(--red-br)}
+  .gal{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:14px}
+  .gal .gth{border-radius:6px;overflow:hidden;border:1px solid var(--line);cursor:pointer;background:#000;transition:border-color .15s ease}
+  .gal .gth:hover,.gal .gth.sel{border-color:var(--red-br)}
+  .gal .gth img{width:100%;height:64px;object-fit:cover;filter:grayscale(.5) brightness(.9);transition:filter .2s ease}
+  .gal .gth:hover img,.gal .gth.sel img{filter:none}
+  .gal-note{font-size:10.5px;color:var(--faint);margin-top:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+
+  /* ---------- NHS mini dashboard (inside modal) ---------- */
+  .pbi{background:#0D0509;border:1px solid rgba(200,16,46,.5);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;margin-top:14px}
+  .pbi-title{font-size:13px;font-weight:800;letter-spacing:.03em;color:#fff;text-transform:uppercase}
+  .pbi-rule{height:3px;background:linear-gradient(90deg,var(--red),rgba(122,12,31,.1));border-radius:2px}
+  .pbi-kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+  .pbi-kpi{background:#140608;border:1px solid rgba(200,16,46,.7);border-radius:6px;padding:6px 4px;text-align:center}
+  .pbi-kpi .k{font-size:7.5px;color:#C9BCC2;line-height:1.25;margin-bottom:2px}
+  .pbi-kpi .v{font-size:14px;font-weight:800;color:#fff;line-height:1.1}
+  .pbi-kpi .v.neg{color:var(--red-br)}
+  .pbi-row{display:grid;grid-template-columns:1.35fr 1fr;gap:8px}
+  .pbi-visual{background:#140608;border:1px solid rgba(200,16,46,.5);border-radius:6px;padding:8px 10px}
+  .pbi-visual .vt{font-size:8.5px;font-weight:700;color:#fff;margin-bottom:4px}
+  .pbi-legend{display:flex;gap:8px;flex-wrap:wrap;font-size:7px;color:#C9BCC2;margin-bottom:3px}
+  .pbi-legend i{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:3px}
+  .pbi-insight{background:#13131D;border:1px solid rgba(200,16,46,.6);border-radius:6px;padding:8px 10px;font-size:8.5px;color:#C9BCC2;line-height:1.5}
+  .pbi-insight b{color:#fff}
+  @media (max-width:640px){.pbi-kpis{grid-template-columns:repeat(3,1fr)}.pbi-row{grid-template-columns:1fr}}
+
+  .rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease, transform .55s ease}
+  .rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">RODRIGO GUTIÉRREZ<em>.</em></a>
+    <nav class="links" id="tabs">
+      <a href="#latest">Latest</a>
+      <a href="#works">Works</a>
+      <a href="#projects">Index</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="meta"><span>Saltillo · MX</span><span id="clock">--:--:--</span></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="kicker">Mechatronics Engineer — Portfolio</div>
+    <h1>Robotics,<br>Vision <span class="thin">&amp;</span> Data<span style="color:var(--red-br)">.</span></h1>
+    <p class="sub">I design and build systems that <b>sense, move and decide</b> — from industrial 3D-scanning rigs and KUKA grippers to world-championship robots, now expanding into <b>data analytics</b>.</p>
+    <div class="hrow">
+      <a class="btn" href="#works">SELECTED WORKS</a>
+      <a class="btn ghost" href="#contact">GET IN TOUCH</a>
+      <span class="scrolldown">Scroll ↓</span>
+    </div>
+    <div class="heromarks rv">
+      <div class="hm"><div class="n">24</div><div class="l">Projects</div></div>
+      <div class="hm"><div class="n">5</div><div class="l">Industry &amp; research roles</div></div>
+      <div class="hm"><div class="n">2×</div><div class="l">World championships</div></div>
+      <div class="hm"><div class="n">4</div><div class="l">Languages</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST -->
+<section id="latest" style="padding-top:0">
+  <div class="wrap">
+    <div class="slabel"><span class="idx">01</span><span class="name">Latest</span><span class="hint">Most recent work — updated regularly</span></div>
+    <div class="feed" id="feed"></div>
+  </div>
+</section>
+
+<!-- SELECTED WORKS -->
+<section id="works" style="padding-top:0">
+  <div class="wrap">
+    <div class="slabel"><span class="idx">02</span><span class="name">Selected Works</span><span class="hint">Six projects that define me</span></div>
+    <div id="worksList"></div>
+    <div class="works-cta"><a class="btn ghost" href="#projects">VIEW ALL 24 PROJECTS ↓</a></div>
+  </div>
+</section>
+
+<!-- ALL PROJECTS -->
+<section id="projects" style="padding-top:0">
+  <div class="wrap">
+    <div class="slabel"><span class="idx">03</span><span class="name">Project Index</span><span class="hint">Every card opens the full story</span></div>
+    <div class="filters" id="filters"></div>
+    <div class="pgrid" id="pGrid"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="padding-top:0">
+  <div class="wrap">
+    <div class="slabel"><span class="idx">04</span><span class="name">About</span></div>
+    <div class="about-grid">
+      <div class="about">
+        <p>I'm Rodrigo — a <b>mechatronics engineering student at Tecnológico de Monterrey</b>, focused on robotics, computer vision and industrial automation.</p>
+        <p>I've built a <b>Kinect-based quality-control rig at Magna CIMS</b>, researched <b>RGB-D vision at CINVESTAV</b>, led <b>Team Romeo's wildfire-response drone</b> for XPRIZE, and programmed robots that reached the <b>VEX U and FRC World Championships</b>. My newest tool: <b>Power BI</b>.</p>
+        <p>I learned <b>German to B2 in six months</b> — then taught it. I like hard problems and short deadlines.</p>
+        <div class="facts rv">
+          <div class="fact"><span class="k">Education</span><span class="v"><b>B.S. Mechatronics Engineering</b> — Tecnológico de Monterrey (2022 – present)</span></div>
+          <div class="fact"><span class="k">Abroad</span><span class="v"><b>Automotive Engineering Course</b> — Steinbeis Transfer Center, Esslingen, Germany (2024)</span></div>
+          <div class="fact"><span class="k">Toolkit</span><span class="v">SolidWorks · Python · Java · C/RobotC · Arduino · Raspberry Pi · KUKA.Sim · Point clouds / RGB-D · <b>Power BI · DAX</b> · 3D printing · Laser cutting</span></div>
+          <div class="fact"><span class="k">Languages</span><span class="v">Spanish <b>native</b> · English <b>professional</b> · German <b>B2</b> · French <b>B1</b></span></div>
+          <div class="fact"><span class="k">Currently</span><span class="v">Open to <b>internships and collaborations</b> — robotics, automation or data · Mexico or abroad</span></div>
+        </div>
+      </div>
+      <div class="aphoto rv"><img src="https://static.wixstatic.com/media/ef03dd_c7284c33092d4159b60d7198c1a4228a~mv2.jpg/v1/fill/w_640,h_820,al_c,q_85/ef03dd_c7284c33092d4159b60d7198c1a4228a~mv2.jpg" alt="Rodrigo Gutiérrez Peña" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="slabel"><span class="idx">05</span><span class="name">Contact</span><span class="hint">Let's build something</span></div>
+    <span style="font-size:13px;color:var(--faint);letter-spacing:.14em;text-transform:uppercase;font-weight:700">Available for internships &amp; collaborations</span>
+    <a class="bigmail" href="mailto:rodrigogtz04@gmail.com">rodrigogtz04@gmail.com</a>
+    <div class="socials">
+      <a class="schip" href="#" title="placeholder">LinkedIn ↗</a>
+      <a class="schip" href="#" title="placeholder">GitHub ↗</a>
+      <a class="schip" href="#" title="placeholder">Download CV ↓</a>
+    </div>
+    <div class="wordmark" aria-hidden="true">Gutiérrez</div>
+    <div class="foot">
+      <span>© 2026 Rodrigo Gutiérrez Peña</span>
+      <span>Saltillo · Monterrey · Esslingen</span>
+      <span id="clock2">--:--:--</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true">
+  <div class="modal-wrap">
+    <button class="mclose" id="mclose" aria-label="Close">✕</button>
+    <div class="modal" id="modalBox"></div>
+  </div>
+</div>
+
+<!-- NHS dashboard recreation (used inside the NHS project modal) -->
+<template id="nhsTpl">
+  <div class="pbi" role="img" aria-label="Recreation of the Power BI report Overview page">
+    <div class="pbi-title">NHS Organ Donation — Last-Mile Logistics Intelligence</div>
+    <div class="pbi-rule"></div>
+    <div class="pbi-kpis">
+      <div class="pbi-kpi"><div class="k">Deceased Donors FY24/25</div><div class="v">1403</div></div>
+      <div class="pbi-kpi"><div class="k">Total Donors FY24/25</div><div class="v">2394</div></div>
+      <div class="pbi-kpi"><div class="k">Waiting List Gap</div><div class="v">2769</div></div>
+      <div class="pbi-kpi"><div class="k">Deaths on List FY24/25</div><div class="v">463</div></div>
+      <div class="pbi-kpi"><div class="k">Transplant Rate</div><div class="v">63%</div></div>
+      <div class="pbi-kpi"><div class="k">Donor Decline YoY</div><div class="v neg">-7%</div></div>
+    </div>
+    <div class="pbi-row">
+      <div class="pbi-visual">
+        <div class="vt">10-Year Donor &amp; Transplant Trend</div>
+        <div class="pbi-legend"><span><i style="background:#C8102E"></i>Deceased Donors</span><span><i style="background:#3CB4E4"></i>Transplants</span><span><i style="background:#FCB418"></i>Active Waiting List</span></div>
+        <svg viewBox="0 0 300 90" style="width:100%;height:auto" aria-hidden="true">
+          <line x1="0" y1="22" x2="300" y2="22" stroke="rgba(255,255,255,.08)" stroke-dasharray="2 3"/>
+          <line x1="0" y1="48" x2="300" y2="48" stroke="rgba(255,255,255,.08)" stroke-dasharray="2 3"/>
+          <line x1="0" y1="74" x2="300" y2="74" stroke="rgba(255,255,255,.08)" stroke-dasharray="2 3"/>
+          <polyline fill="none" stroke="#FCB418" stroke-width="2" points="0,33 33,35 66,36 100,37 133,39 166,48 200,40 233,29 266,21 300,16"/>
+          <polyline fill="none" stroke="#3CB4E4" stroke-width="2" points="0,55 33,54 66,53 100,54 133,54 166,63 200,59 233,57 266,56 300,57"/>
+          <polyline fill="none" stroke="#C8102E" stroke-width="2" points="0,77 33,76 66,74 100,74 133,74 166,79 200,77 233,76 266,75 300,76"/>
+        </svg>
+        <div style="display:flex;justify-content:space-between;font-size:6.5px;color:#8F8189"><span>2015-16</span><span>2019-20</span><span>2024-25</span></div>
+      </div>
+      <div style="display:grid;gap:8px">
+        <div class="pbi-visual">
+          <div class="vt">Donor Type Breakdown FY24/25</div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <svg viewBox="0 0 42 42" style="width:52px;height:52px" aria-hidden="true">
+              <circle cx="21" cy="21" r="15.9" fill="none" stroke="#C8102E" stroke-width="7" stroke-dasharray="41.4 58.6" stroke-dashoffset="25"/>
+              <circle cx="21" cy="21" r="15.9" fill="none" stroke="#F06483" stroke-width="7" stroke-dasharray="30.4 69.6" stroke-dashoffset="-16.4"/>
+              <circle cx="21" cy="21" r="15.9" fill="none" stroke="#F9AABF" stroke-width="7" stroke-dasharray="28.2 71.8" stroke-dashoffset="-46.8"/>
+            </svg>
+            <div style="font-size:7.5px;color:#C9BCC2;line-height:1.6">
+              <span style="color:#F9AABF">■</span> DBD — 991 (41.4%)<br>
+              <span style="color:#F06483">■</span> DCD — 727 (30.4%)<br>
+              <span style="color:#C8102E">■</span> Living — 676 (28.2%)
+            </div>
+          </div>
+        </div>
+        <div class="pbi-visual">
+          <div class="vt">Transplants by Organ FY24/25</div>
+          <div style="display:grid;gap:3px;font-size:7px;color:#C9BCC2">
+            <div style="display:grid;grid-template-columns:34px 1fr 22px;gap:4px;align-items:center"><span>Kidney</span><div style="height:6px;background:#C8102E;border-radius:2px;width:100%"></div><span>3305</span></div>
+            <div style="display:grid;grid-template-columns:34px 1fr 22px;gap:4px;align-items:center"><span>Liver</span><div style="height:6px;background:#C8102E;border-radius:2px;width:30%"></div><span>991</span></div>
+            <div style="display:grid;grid-template-columns:34px 1fr 22px;gap:4px;align-items:center"><span>Heart</span><div style="height:6px;background:#C8102E;border-radius:2px;width:5%"></div><span>168</span></div>
+            <div style="display:grid;grid-template-columns:34px 1fr 22px;gap:4px;align-items:center"><span>Lung</span><div style="height:6px;background:#C8102E;border-radius:2px;width:4.6%"></div><span>151</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pbi-insight"><b>463</b> patients <b>died</b> waiting in <b>FY24/25</b> — up <b>11%</b> YoY · <b>DCD</b> donors exceeded <b>DBD</b> for the <b>first time in history</b> · Waiting list: <b>8,096</b> — highest ever recorded · <b>13-stage</b> NORS cold-chain pipeline modeled with per-organ <b>CIT risk</b></div>
+  </div>
+</template>
+
+<script>
+const W = (id, w, h) => `https://static.wixstatic.com/media/${id}/v1/fill/w_${w},h_${h},al_c,q_85/${id}`;
+
+const GROUPS = {
+  professional: { label: "Industry & Research", color: "#C8102E" },
+  competition:  { label: "Competitions & Leadership", color: "#FCB418" },
+  university:   { label: "University Projects", color: "#3CB4E4" },
+  education:    { label: "Languages & Education", color: "#F27DA0" }
+};
+
+const PROJECTS = [
+ {t:"3D Scanning Rig Prototype for Quality Control – Magna CIMS",g:"professional",d:"May 2025",loc:"Ramos Arizpe, MX",img:"9f291f79-b9df-4f61-a51a-ced405964393",feat:1,flag:"Industry · Magna",
+  sum:"Kinect-based point-cloud scanning rig that makes geometric inspection faster and more accessible on the production floor.",
+  body:"During my time at Magna CIMS, I developed a prototype of a 3D scanning rig intended to streamline quality assurance processes on the production floor. The system leveraged Kinect sensors to generate point clouds of components, enabling faster and more accessible geometric inspection. The rig was designed for cost-effective implementation and adaptability within existing workflows.\n\nI designed the mechanical structure using SolidWorks, fabricated components through 3D printing, and tested the scanning system using point cloud data acquisition. My contributions bridged mechanical design and digital processing to support real-time quality evaluations.",
+  tags:["3D scanning","Point clouds","SolidWorks","Kinect","Quality control"]},
+ {t:"RGB-D & Point Cloud Vision Systems – Research at CINVESTAV",g:"professional",d:"Feb 2025",loc:"Ramos Arizpe, MX",img:"0913c401-60fb-49d3-81ab-e8f27ec5709e",feat:1,flag:"Research · CINVESTAV",
+  sum:"Computer-vision research on depth data and spatial reconstruction for robotic perception and scene understanding.",
+  body:"At CINVESTAV (Centro de Investigación y de Estudios Avanzados), I participated in research focused on computer vision systems using RGB-D data and point cloud processing. The work involved exploring depth-enhanced image data and spatial reconstruction techniques for potential applications in object detection, scene understanding, and robotic perception.\n\nI contributed to the analysis and interpretation of RGB-D datasets, and supported the development of algorithms for spatial mapping and segmentation using point cloud data. This experience deepened my understanding of 3D vision systems and advanced data structures for real-time visual processing.",
+  tags:["RGB-D vision","Point clouds","Computer vision","3D reconstruction","Research"]},
+ {t:"Team Romeo – High-Speed Drone for Wildfire Response (GTI / XPRIZE)",g:"professional",d:"Jun 2024",loc:"Monterrey, MX",img:"a327ebfe-81bd-47fc-8789-4a3b1e1f524e",feat:1,flag:"Team Lead · XPRIZE",
+  sum:"Led the design team behind an ultra-fast, high-payload drone for rapid wildfire scanning and suppression.",
+  body:"At Green Tech Innovation (GTI), I served as the Team Lead for a specialized design team developing an ultra-fast, high-payload drone intended for rapid area scanning and targeted wildfire suppression. As part of our entry for the XPRIZE Wildfire Challenge, Team Romeo focused on optimizing drone geometry, modularity, and production workflows to deliver a scalable, field-deployable solution for global wildfire response.\n\nI led the conceptual and mechanical design efforts, guiding the team through CAD development, feasibility reviews, and design iteration cycles. I also oversaw the simplification of manufacturing processes to improve reliability and reduce assembly time, ensuring our prototype aligned with XPRIZE technical criteria and long-term innovation goals.",
+  tags:["Drone design","Team leadership","CAD","XPRIZE","Rapid prototyping"]},
+ {t:"Automated Gripper Design for KUKA Robotic Arm – GecVac",g:"professional",d:"Nov 2024",loc:"Saltillo, MX",img:"9c756c50-2e73-4625-8048-647f02775dd1",feat:1,flag:"Industry · KUKA",
+  sum:"Conceptual and functional gripper prototype for a KUKA arm — simulated in KUKA.Sim, built with additive manufacturing.",
+  body:"As part of a comprehensive robotics research project involving KUKA industrial systems, I developed a conceptual and functional prototype of an automated gripper tailored for a KUKA robotic arm. The project encompassed simulation with KUKA.Sim, hardware considerations for integration with a KRC 5 controller, and robotic calibration to ensure precise manipulation of objects. The gripper was designed for adaptability, precision, and ease of manufacturing.\n\nI led the CAD design of the gripper, focusing on mechanical efficiency and integration with the KUKA arm's geometry. I also prototyped the system using additive manufacturing and worked on early-stage control integration. My work directly contributed to the validation and calibration of robotic operations for object handling tasks.",
+  tags:["KUKA","Gripper design","KUKA.Sim","KRC 5","Industrial automation"]},
+ {t:"Automated Transport Cart Concept for Polsa",g:"professional",d:"Aug 2024",loc:"Saltillo, MX",img:"50731d9c-9b2b-4e18-9ec5-0431f23ecc01",
+  sum:"SolidWorks-designed automated cart in PTR steel, driven by a Raspberry Pi Pico through gears and chains.",
+  body:"At Polsa, I contributed to the development of a new transportation solution for their production process by designing an automated transport cart. The project aimed to streamline material handling within the facility, enhancing operational efficiency.\n\nI created the initial design in SolidWorks, focusing on structural integrity and functionality. The cart was constructed using PTR steel, and integrated with a Raspberry Pi Pico to control movement through gears and chains. The final system allowed for efficient and automated transport of materials, reducing manual handling and optimizing workflow.",
+  tags:["SolidWorks","Raspberry Pi","Automation","Mechanical design"]},
+ {t:"VEX U – ITESM2 Robotics Programmer",g:"competition",d:"Apr 2024",loc:"Dallas, TX — Worlds",img:"bd1d8841-1398-4de3-b701-ee63df014996",
+  sum:"Programmed autonomous and driver-control code for a season that ended at the VEX Robotics World Championship.",
+  body:"As part of the ITESM team competing in the VEX U robotics league, I served as a programmer during a highly competitive season that culminated in qualifying for the VEX Robotics World Championship. The challenge required advanced coding, strategic planning, and tight collaboration across design, electronics, and control systems.\n\nI was responsible for developing and debugging autonomous and driver-control code using VEXcode and RobotC, ensuring reliable movement and task execution on the competition field. My role was critical in fine-tuning performance, optimizing sensor feedback, and integrating code with mechanical subsystems throughout the season.",
+  tags:["VEX U","RobotC","Autonomous","World Championship"]},
+ {t:"FRC – Blue Ignition Programmer & Mentor",g:"competition",d:"Apr 2023",loc:"Houston, TX — Worlds",img:"f6bc9320-b2ee-477c-bb80-054a3d02871a",
+  sum:"From programmer to mentor: Java control systems and coaching that helped the team reach the FRC World Championship.",
+  body:"I participated in the FIRST Robotics Competition (FRC) as both a programmer and later as a mentor for the Blue Ignition team. During my time as a programmer, I contributed to the development and debugging of robot control systems for regional competitions. The following season, I returned as a mentor, guiding the team in strategy, programming, and competition readiness. The team earned a spot at the FRC World Championship, representing our region on an international stage.\n\nAs a programmer, I focused on robot mobility and autonomous routines using Java. As a mentor, I provided technical coaching, project planning support, and motivational guidance for new team members, reinforcing teamwork and problem-solving under pressure.",
+  tags:["FRC","Java","Mentorship","Control systems"]},
+ {t:"Gravity Racer – Regional Competition, 2nd Place",g:"competition",d:"May 2024",loc:"Coahuila, MX",img:"c43c36c2-b48a-456b-a483-5e856d135bbe",
+  sum:"Precision-machined downhill racer that took 2nd place regionally on speed and structural integrity.",
+  body:"As part of a machine shop course, I collaborated on the design and construction of a gravity-powered race car built for a regional downhill racing competition. The project required precision machining, mechanical assembly, and performance optimization under strict weight and stability constraints. The vehicle earned second place in the competition, showcasing both its speed and structural integrity.\n\nI contributed to the vehicle's design and fabrication, working with tools and materials in a machining workshop to build a reliable and aerodynamic frame. I also participated in testing and fine-tuning the racer's components for maximum speed and control.",
+  tags:["Machining","Fabrication","Competition","Mechanical design"]},
+ {t:"Peer Mentoring Program – Student Support & Guidance",g:"competition",d:"Aug 2023",loc:"Saltillo, MX",img:"2cacd418-6e22-43dc-ba2b-dcd2365f66aa",
+  sum:"Certified peer mentor providing one-on-one support, psychological first aid and structured follow-ups for first-year students.",
+  body:"As part of the Peer Mentor program at Tecnológico de Monterrey, I completed a formal certification focused on peer-to-peer mentoring and emotional support. The program emphasized psychological first aid, active listening, and strategies for supporting first-year students in their academic and personal transitions.\n\nI provided one-on-one mentoring to new students, helping them adapt to university life through empathy, structured follow-ups, and referral to campus resources when needed. The experience deepened my interpersonal skills and strengthened my ability to support others in emotionally and academically demanding environments.",
+  tags:["Leadership","Mentoring","Soft skills"]},
+ {t:"Self-Stabilizing Rolling Sphere",g:"university",d:"Nov 2024",loc:"Saltillo, MX",img:"d6eed2c1-2c4e-45ea-9d24-0ab61bf21dc0",
+  sum:"Spherical robot with MPU6050-based internal motion control — full CAD, 3D printing and embedded Python.",
+  body:"This project aimed to develop a self-stabilizing spherical robot with internal motion control based on data from an MPU6050 gyroscope and accelerometer. The design integrated DC motors, H-bridge drivers, a LiPo battery, and a Raspberry Pi Pico for embedded control. Although a voltage spike caused a failure in the motor driver, the project showcased strong development in mechanical design, electronics integration, and programming.\n\nI created the full CAD model and 3D-printed the mechanical shell and internal structure. I also programmed the motion logic in Python to interpret sensor data and drive the motors accordingly. Despite the setback with the burned H-bridge, the project allowed me to deepen my skills in embedded systems, rapid prototyping, and sensor-based control.",
+  tags:["Embedded Python","Raspberry Pi Pico","MPU6050","3D printing"]},
+ {t:"Humanoid Motion Mimicry with Dynamixel Robot",g:"university",d:"Mar 2025",loc:"Saltillo, MX",img:null,
+  sum:"One-week TEC21 challenge: programming a Dynamixel humanoid to mimic human movements like jumps and lateral slides.",
+  body:"As part of a one-week intensive TEC21 challenge, I programmed a humanoid robot powered by Dynamixel actuators to mimic basic human movements such as jumping and lateral slides. The goal was to explore motion capture concepts and apply them to robotics through sequential motor control and movement coordination.\n\nI developed the robot's motion sequences using basic scripting and joint manipulation logic, focusing on synchronizing Dynamixel servos to imitate simplified human actions. This hands-on experience helped me understand inverse kinematics, balance constraints, and timing in bipedal robot movement.",
+  tags:["Dynamixel","Humanoid","Inverse kinematics"]},
+ {t:"Automated Industrial Blind Prototype",g:"university",d:"Mar 2024",loc:"Saltillo, MX",img:"3264c716-19df-4a69-a345-1e552eb3a3b6",
+  sum:"Arduino-controlled blind with ultrasonic position sensing, LCD feedback and an emergency-stop safety system.",
+  body:"This conceptual project focused on developing a functional prototype of an automated industrial blind using fabric, wood, and embedded electronics. The system featured emergency stop mechanisms, automated raising functionality, an LCD display, and ultrasonic sensors to detect the curtain's current position—all managed through an Arduino microcontroller.\n\nI built the prototype structure, integrated ultrasonic sensors for real-time position tracking, and programmed the Arduino to control the blind's movement based on user inputs and safety conditions. I also implemented an LCD interface to provide feedback and designed the emergency stop function to prioritize user safety and system reliability.",
+  tags:["Arduino","Ultrasonic sensors","Automation","Safety"]},
+ {t:"Laser-Cut Wooden Can Crusher",g:"university",d:"Apr 2024",loc:"Saltillo, MX",img:"352de7a9-dad6-4532-a4a2-4d60829a23f5",
+  sum:"Functional can crusher rebuilt in SolidWorks and manufactured entirely with laser-cut interlocking wood parts.",
+  body:"This project involved the digital replication and physical construction of a functional can crusher made entirely from laser-cut wood components. Inspired by an existing online design, the project focused on mechanical modeling, file preparation for manufacturing, and precision assembly using digital fabrication tools.\n\nI recreated the mechanical design in SolidWorks based on reference images, prepared precise DXF files for laser cutting, and operated the laser machine to manufacture each wooden part. I then assembled the crusher, ensuring proper alignment and structural integrity using interlocking joints and adhesives.",
+  tags:["SolidWorks","Laser cutting","DXF","Fabrication"]},
+ {t:"Cardboard Chair for Visually Impaired Children",g:"university",d:"Nov 2023",loc:"Saltillo, MX",img:"ce199cb8-eb31-4bb0-b402-36915c865840",
+  sum:"Inclusive, eco-friendly cardboard chair — iterated through structural testing on a universal testing machine.",
+  body:"This project focused on the design and structural optimization of a lightweight, eco-friendly chair tailored for visually impaired children. Constructed from laser-cut cardboard, the chair emphasized simplicity, accessibility, and safety. Multiple prototype iterations were developed and tested using a universal testing machine to evaluate stress distribution and inform scaling decisions.\n\nI created the initial CAD designs, prepared DXF files for laser cutting, and assembled each prototype using adhesive bonding. I refined the geometry over several iterations and conducted structural testing to identify the most robust version for scaling. The project emphasized ergonomic design, rapid prototyping, and mechanical performance evaluation.",
+  tags:["Inclusive design","CAD","Structural testing","Prototyping"]},
+ {t:"Three-Way Speaker System with Passive Crossover Filter",g:"university",d:"Apr 2023",loc:"Saltillo, MX",img:"b909640d-5b91-439a-876b-d4c52cbe05ea",
+  sum:"LC crossover filter splitting lows, mids and highs to dedicated drivers — simulated, then built and tuned by hand.",
+  body:"This project focused on designing and building a three-way speaker system using a passive low-pass filter composed of inductors and capacitors. The system successfully separated low, mid, and high frequencies, directing each to a dedicated speaker (woofer, midrange, and tweeter). Both circuit simulation and physical construction were key elements of the development process.\n\nI designed and implemented a passive crossover filter using LC components to divide the audio spectrum. I simulated the circuit to validate frequency behavior, then assembled the system using an auxiliary cable for audio input and separate drivers for bass, midrange, and treble. The final result was a fully functional speaker capable of delivering clear, layered sound.",
+  tags:["Electronics","Circuit design","Acoustics","Simulation"]},
+ {t:"Custom-Built BLDC Motor Prototype",g:"university",d:"Jun 2023",loc:"Saltillo, MX",img:"f6ea4a83-bc6e-470c-b822-fccc2a70878b",
+  sum:"Hand-wound coils, 3D-printed stator and controller wiring — a deep dive into motor design and electromagnetics.",
+  body:"This project involved the assembly and partial testing of a custom brushless DC (BLDC) motor, including wiring, controller setup, and the fabrication of a custom stator using 3D-printed parts and hand-wound coils. Although the motor could not rotate due to the lack of sufficiently strong neodymium magnets, the magnetic field activation was successfully verified upon powering the system.\n\nI handled the electrical connections between the motor and its controller, participated in the 3D printing of structural components, and contributed to the coil winding process. Despite the limitations in materials, the project offered valuable experience in motor design principles, electromagnetic behavior, and hardware troubleshooting.",
+  tags:["BLDC","Coil winding","3D printing","Motor control"]},
+ {t:"Conceptual Sea Bin for SDG-Inspired Water Cleanup",g:"university",d:"Aug 2024",loc:"Saltillo, MX",img:"f13258f4-37fe-4eb1-987e-5512967fa9f2",
+  sum:"Floating waste-collection prototype with a pump-driven suction cycle, aligned with the UN Sustainable Development Goals.",
+  body:"This project involved creating a conceptual prototype of a floating waste collection device inspired by the Sea Bin initiative, aligned with the United Nations Sustainable Development Goals (SDGs). The design featured a water pump, a PVC pipe system, and a bucket structure to simulate the suction and capture of floating debris in water bodies.\n\nI assembled the system using PVC tubing, a submersible water pump, and a simple switch-based control to activate the collection cycle. The prototype demonstrated the potential for low-cost, scalable waste interception in aquatic environments, serving as an educational model for environmental engineering solutions.",
+  tags:["Sustainability","SDG","Green engineering"]},
+ {t:"Multi-Level Water Leveling System with Energy Recovery",g:"university",d:"Nov 2022",loc:"Saltillo, MX",img:"3437f22e-c2c0-4539-97fa-237099289539",
+  sum:"Bernoulli-inspired water system with precision-cut wood levels and a small generator recovering energy from the flow.",
+  body:"This project consisted of designing and building a water leveling system inspired by Bernoulli's principle to study pressure distribution across multiple height levels. The system was constructed primarily from wood, with carefully dimensioned cuts to achieve specific flow characteristics. At the final stage, a small motor was added to harness kinetic energy from the descending water and convert it into electrical energy.\n\nI designed the layout based on fluid dynamics concepts, executed precision wood cuts to match target pressures, and assembled the full system manually. I also integrated a small generator to capture energy from the falling water, combining mechanical design with a basic introduction to renewable energy systems.",
+  tags:["Fluid mechanics","Renewable energy","Prototyping"]},
+ {t:"PVC Underwater ROV for Task Execution",g:"university",d:"Oct 2022",loc:"Saltillo, MX",img:"11887f12-c1c8-4a64-bb90-4d37dbddf831",
+  sum:"Tethered underwater ROV in waterproofed PVC, driven through three-state toggle controls for pool task missions.",
+  body:"This project focused on the construction and operation of a remotely operated underwater vehicle (ROV) built with PVC tubing, designed to perform tasks in a swimming pool environment. The ROV was powered by a lead-acid battery and controlled through a tethered Ethernet cable, which transmitted signals to motors via three-state toggle switches.\n\nI contributed to the mechanical assembly using waterproof techniques with PVC, configured the electrical wiring between the motors and control interface, and helped implement the control system using triple-position levers for directional control. The ROV successfully performed underwater maneuvers and basic task operations, showcasing effective team-based prototyping in a challenging environment.",
+  tags:["ROV","Underwater robotics","Electrical wiring"]},
+ {t:"PISA Exam Practice Interface in Python",g:"university",d:"Oct 2022",loc:"Saltillo, MX",img:"801db084-1a01-4c1a-98b3-d9b34124423f",
+  sum:"Interactive Python GUI built from scratch — canvas rendering, event handling and question logic for exam practice.",
+  body:"This project involved the development of a fully interactive graphical interface using Python, designed to help users practice questions modeled after the PISA exam. The interface featured a custom image-based canvas with clickable buttons and responsive behavior, allowing users to navigate through a series of practice problems in an intuitive way.\n\nI programmed the entire application from scratch in Python, including UI layout, event handling, question logic, and user feedback. I used image assets and canvas drawing tools to create a visual and functional experience, ensuring smooth interaction and a clean educational interface.",
+  tags:["Python","GUI","EdTech"]},
+ {t:"German – B2 in 6 Months & Teaching Experience",g:"education",d:"Aug 2024",loc:"Saltillo, MX",img:"28d4a0ab-450b-43fc-8c11-19a4198981ff",
+  sum:"Reached B2 German in six months, then taught it — proof of fast, deep learning.",
+  body:"In just 6 months, I learned German, achieving B2 proficiency in both speaking and writing. This rapid language acquisition enabled me to further develop my skills and eventually transition into a teaching role, where I helped others navigate the complexities of the language. My experience as a German teacher further honed my understanding of the language and deepened my passion for language education.",
+  tags:["German B2","Teaching","Fast learning"]},
+ {t:"French – B1 Immersive Program, Voxea Swiss Academy",g:"education",d:"2019 – 2022",loc:"Switzerland (online)",img:"1918b4ee-5305-4e13-9343-2f0e0d805249",
+  sum:"Conversational French built through high school and certified at B1 via an immersive Swiss winter program.",
+  body:"I learned French during high school and developed conversational skills in the language over time. To deepen my proficiency, I participated in an immersive winter program at Voxea Swiss Academy in Switzerland, completing an online course that led to accreditation at the B1 level. This experience not only improved my linguistic abilities but also enhanced my cultural understanding of French-speaking regions.",
+  tags:["French B1","Immersion","Voxea"]},
+ {t:"Automotive Engineering Course – Steinbeis Transfer Center (STiAE)",g:"education",d:"Jan 2024",loc:"Esslingen, Germany",img:"247c0fd2-d984-4f44-9ef4-9d097b11bb31",
+  sum:"Specialized automotive engineering training in Germany — vehicle systems, design principles and advanced technologies.",
+  body:"As part of my continued education in automotive engineering, I completed a specialized course at the Steinbeis Transfer Center in Esslingen, Germany. The course covered key aspects of automotive systems, design principles, and engineering applications, with a focus on the integration of advanced technologies in vehicle development.\n\nThis experience provided me with valuable insights into cutting-edge engineering solutions and the challenges facing the automotive industry today. It also allowed me to apply my skills in a real-world context, reinforcing my understanding of complex engineering systems.",
+  tags:["Automotive","Steinbeis","Germany"]}
+];
+
+
+/* ---------- project photo galleries (from the Wix Portfolio app) ---------- */
+const E = s => 'ef03dd_' + s;
+const GALLERIES = {
+  1:['f270020e932f451bba66441b75c4657b~mv2.png','fd7157c35f7045779941acd3585981ed~mv2.png'].map(E),
+  2:['d91ac51925f54494a857088718a53af5~mv2.jpg','5db4a4fc50a7411e971aa8da4ccbf3f7~mv2.jpg'].map(E),
+  3:['e0849d6c3420442295cc7b826714ce32~mv2.png','7f4513c8b40840fe95061e54d21b32bb~mv2.png'].map(E),
+  4:['57ef4649bfff4029a85b93192bd9babd~mv2.jpg','2d6fe1cc8c3f451592a1074b22d45688~mv2.png','e79163f1975b475fafbe17b1d5e27cf4~mv2.png','00328a643c25479cb8ed06c7d31c5674~mv2.png','beaa8043175e417b913add33eeb7a177~mv2.jpg'].map(E),
+  5:['a36d5e8276f84073b5f120486a3f5695~mv2.jpg','3c501bfb956e4c159f8ba191c41c16a0~mv2.jpg','470ef71c9f194cf6ae2baca09a705b36~mv2.jpg','aced4b4f24964b8da9b894d00578f44b~mv2.jpg','97d2f74843394ce6903c744db1be909c~mv2.jpg','19d7bba6b8c1421a87d47a712e40df72~mv2.png','ba2c605b119a4810976727f821568d2b~mv2.jpg'].map(E),
+  6:['67248a2faedc46d8a75d826937b9ae97~mv2.jpg','46576f824c104eb4b3aa7efe99c00278~mv2.png','d29ee6e93f6c47e0ae3ebddee5c4bc5d~mv2.png','ca5a8daa8d324498882c99bce33cc87e~mv2.png','ee6ea02895ca438b857425fc263a5339~mv2.png','80b4f34207cf4dcb9177b3c25e57c521~mv2.png','fc296e89050c4bed8298c99d49b9504b~mv2.jpg','9ced666147b44d218e7edbaef96a3a07~mv2.jpg'].map(E),
+  7:['0964b65773f542979c6ce8f3a2fd7657~mv2.png','307d18256f6047c4bf7191a40e2691c0~mv2.png','51964713c9c945a5acce78fec546f2c6~mv2.png','19739370cf7745bc8abb1067745eaae5~mv2.png','e317faded5174d47a3560a94b2e1bb5b~mv2.png','cb682ce827c34fc9852c26a62566e4ea~mv2.png','3b1ae076120042958edfd70b6688bf82~mv2.png','0351fa6873b94bda8ae2d2b3155c4346~mv2.jpg','06fcfdc885c041788065d7067f5ca7c1~mv2.jpg','3ff394c6d2974cff842235e9948fb265~mv2.jpg'].map(E),
+  8:['d8a4349ebc364e86b9dd760c78816077~mv2.jpg','4f68fdc2531b45c6bc26f9fdf3833d61~mv2.jpg'].map(E),
+  9:['f599ac31145e40c08124837092995d38~mv2.jpg','e78b90a39f1f4039b11dae598af85eac~mv2.jpg','730bf39707ac411bbbed0bc491c2c1f6~mv2.jpg','1e704f19796946a58f22a8390d496ba3~mv2.jpg','3fbbdd6394da4ded85615314aeef3da4~mv2.jpg'].map(E),
+  11:['b7b5d14980d54f4095e107e74f0653c8~mv2.jpg'].map(E),
+  12:['fb8ebb1912f2433b8d57a7aa0a25b7ac~mv2.jpg','9c6272c97f1c4641bc0187e34c87aee4~mv2.jpg','c1bb998c3b3e483fb5d88c4acdbd909c~mv2.jpg'].map(E),
+  13:['52884e2ae3124129901616c306c9ccc0~mv2.jpg','cd415910978148f5a67bb4e4c4dbedb5~mv2.jpg','1a23b516d1e94cf28b88eaecd27ec68c~mv2.jpg','eaed45dd0beb49b49998b5d624083cd7~mv2.jpg','917970cd6a884efe83e1e8fed6562a5f~mv2.jpg','d60c7bf94e0e46ae86f189ba7d46ea25~mv2.jpg','925d1224481144a7bc6d26514df0af9d~mv2.jpg','0a7bfd66e5534518ac5378b9f8a824b6~mv2.jpg'].map(E),
+  14:['bdfd209b566545269e9bc55d5ad91d39~mv2.jpg'].map(E),
+  15:['07518a40f63c449d905cf5219406422b~mv2.jpg'].map(E),
+  17:['1320fbe8f26e4f388cd07cf491f5faee~mv2.jpg'].map(E),
+  18:['5b982c3e856845cea3c7c58234cfa8b9~mv2.jpg'].map(E),
+  20:['32ed0793c9c442628adce2e1f50e2abc~mv2.jpg'].map(E),
+  22:['83779ce77ccc41a7a928f50ba79bbd1f~mv2.jpg','2f8ac4e9246a422f873c4e11c6d87403~mv2.jpg','5c6ffebc361f4f9eb4c90ca1a553d8b4~mv2.jpg','482a96401cb14a6fa0adebb1fa293af9~mv2.jpg','735a4c1533a7408191c7df69d4e497cc~mv2.jpg','85199237897043e6aa1ec6db9dd44fd7~mv2.jpg','4fb5ba4982d347a197668dbf822fb025~mv2.jpg','6ca79de1fb7942988ea5cb42d837da42~mv2.jpg'].map(E)
+};
+
+/* ================= v4 render logic ================= */
+
+/* clock (biipmk touch) */
+function tick(){
+  const now = new Date().toLocaleTimeString('en-GB',{timeZone:'America/Monterrey',hour12:false});
+  const c1 = document.getElementById('clock'), c2 = document.getElementById('clock2');
+  if(c1) c1.textContent = now; if(c2) c2.textContent = now + ' CST';
+}
+tick(); setInterval(tick, 1000);
+
+/* ---------- NHS special project ---------- */
+const NHS = {
+  t:'NHS Organ Donation — Power BI Analysis', d:'2026', loc:'Data & Analytics',
+  tags:['Power BI','DAX','Data modeling','Supply chain','Healthcare data'],
+  body:"A 5-page interactive Power BI report on NHS organ donation — treating organs as the ultimate last-mile logistics problem. Ten years of NHSBT data (2015–2025) across donor acquisition, consent analytics, organ-level supply vs demand, and cold-chain delivery risk.\n\nBuilt with drillthrough pages, DAX measures and a design system of KPI cards, gauges and risk matrices — the same crimson visual language as this portfolio."
+};
+
+/* ---------- LATEST feed (updatable: newest first) ---------- */
+const FEED = [
+  { nhs:true,  date:'2026',     title:'NHS Organ Donation — Power BI Analysis', tag:'Data & Analytics', isNew:true },
+  { idx:0,     date:'May 2025', title:'3D Scanning Rig for Quality Control — Magna CIMS', tag:'Industry' },
+  { idx:10,    date:'Mar 2025', title:'Humanoid Motion Mimicry with Dynamixel Robot', tag:'Robotics' },
+  { idx:1,     date:'Feb 2025', title:'RGB-D & Point Cloud Vision — CINVESTAV', tag:'Research' }
+];
+const feedEl = document.getElementById('feed');
+FEED.forEach(f=>{
+  const row = document.createElement('div');
+  row.className = 'frow';
+  row.innerHTML = `<span class="fd">${f.date}</span>
+    <span class="ft">${f.title}${f.isNew?'<span class="badge-new">NEW</span>':''}</span>
+    <span class="ftag">${f.tag}</span><span class="arr">→</span>`;
+  row.addEventListener('click', ()=> f.nhs ? openNHS() : openModal(f.idx));
+  feedEl.appendChild(row);
+});
+
+/* ---------- SELECTED WORKS: six big rows ---------- */
+const SELECTED = [0, 1, 2, 3, 5, 6]; // Magna, CINVESTAV, Romeo, GecVac, VEX, FRC
+const worksList = document.getElementById('worksList');
+SELECTED.forEach((pi, k)=>{
+  const p = PROJECTS[pi];
+  const el = document.createElement('article');
+  el.className = 'work rv';
+  el.innerHTML = `
+    <div class="wim"><span class="wnum">0${k+1}</span><img src="${W(p.img,1600,860)}" alt="${p.t}" loading="lazy"></div>
+    <div class="wbar">
+      <span class="wtitle">${p.t.split(' – ')[0].split(' — ')[0]}</span>
+      <span class="wyear">${p.d}</span>
+      <span class="wmeta">${p.tags.slice(0,4).join(' · ')} — ${p.loc}</span>
+    </div>`;
+  el.addEventListener('click', ()=>openModal(pi));
+  worksList.appendChild(el);
+});
+
+/* ---------- filters + grid ---------- */
+const counts = { all: PROJECTS.length };
+Object.keys(GROUPS).forEach(g => counts[g] = PROJECTS.filter(p=>p.g===g).length);
+const filtersEl = document.getElementById('filters');
+const FILTERS = [["all","All"],["professional","Industry & Research"],["competition","Competitions & Leadership"],["university","University"],["education","Languages & Education"]];
+let active = "all";
+FILTERS.forEach(([key,label])=>{
+  const b = document.createElement('button');
+  b.className = 'fchip' + (key==='all' ? ' on' : '');
+  b.innerHTML = `${label}<span class="n">${counts[key]}</span>`;
+  b.addEventListener('click',()=>{ active = key;
+    document.querySelectorAll('.fchip').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); renderGrid();
+  });
+  filtersEl.appendChild(b);
+});
+
+const pGrid = document.getElementById('pGrid');
+function renderGrid(){
+  pGrid.innerHTML = '';
+  PROJECTS.forEach((p,i)=>{
+    if(active!=='all' && p.g!==active) return;
+    const g = GROUPS[p.g];
+    const el = document.createElement('article');
+    el.className = 'pcard';
+    el.innerHTML = `
+      <div class="im">${p.img ? `<img src="${W(p.img,640,460)}" alt="${p.t}" loading="lazy">` : `<div class="ph">🤖</div>`}</div>
+      <h3>${p.t}</h3>
+      <span class="meta"><i>${g.label}</i> · ${p.d}</span>`;
+    el.addEventListener('click',()=>openModal(i));
+    pGrid.appendChild(el);
+  });
+}
+renderGrid();
+
+/* ---------- modal ---------- */
+const overlay = document.getElementById('overlay');
+const modalBox = document.getElementById('modalBox');
+function baseModal(p, extraHtml, imgId){
+  const galHtml = extraHtml || '';
+  modalBox.innerHTML = `
+    ${imgId ? `<div class="mim"><img id="mMain" src="${W(imgId,1200,680)}" alt="${p.t}"></div>` : ''}
+    <div class="mbd">
+      <div class="gline">${p.gl}</div>
+      <h3>${p.t}</h3>
+      <div class="mmeta"><span class="tag">📅 ${p.d}</span><span class="tag">📍 ${p.loc}</span></div>
+      ${p.body.split('\n\n').map(x=>`<p>${x}</p>`).join('')}
+      <div class="tagrow mmeta" style="margin-top:6px;margin-bottom:0">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      ${galHtml}
+    </div>`;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function openModal(i){
+  const p = PROJECTS[i]; const g = GROUPS[p.g];
+  const gal = GALLERIES[i] || [];
+  const thumbs = [p.img,...gal].filter(Boolean);
+  const galHtml = thumbs.length > 1 ? `
+      <div class="gal-note">Project gallery — ${thumbs.length} photos</div>
+      <div class="gal">${thumbs.map((id,k)=>`<div class="gth${k===0?' sel':''}" data-src="${W(id,1200,680)}"><img src="${W(id,300,200)}" alt="${p.t} — photo ${k+1}" loading="lazy"></div>`).join('')}</div>` : '';
+  baseModal({...p, gl:g.label}, galHtml, p.img || gal[0]);
+  modalBox.querySelectorAll('.gth').forEach(th=>th.addEventListener('click',()=>{
+    const main = document.getElementById('mMain');
+    if(main) main.src = th.dataset.src;
+    modalBox.querySelectorAll('.gth').forEach(x=>x.classList.remove('sel'));
+    th.classList.add('sel');
+    overlay.scrollTo({top:0,behavior:'smooth'});
+  }));
+}
+function openNHS(){
+  baseModal({...NHS, gl:'Latest · Data & Analytics'}, '', null);
+  const tpl = document.getElementById('nhsTpl');
+  if(tpl) modalBox.querySelector('.mbd').appendChild(tpl.content.cloneNode(true));
+}
+function closeModal(){ overlay.classList.remove('open'); document.body.style.overflow=''; }
+document.getElementById('mclose').addEventListener('click',closeModal);
+overlay.addEventListener('click',e=>{ if(e.target===overlay) closeModal(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
+
+/* ---------- active nav link on scroll ---------- */
+const tabLinks = [...document.querySelectorAll('#tabs a')];
+const secIds = ['latest','works','projects','about','contact'];
+window.addEventListener('scroll',()=>{
+  let cur = '';
+  secIds.forEach(id=>{ const el=document.getElementById(id); if(el && el.getBoundingClientRect().top < 140) cur = id; });
+  tabLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+cur));
+},{passive:true});
+
+/* ---------- reveal ---------- */
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.06});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('in')), 1600);
+
+</script>
+</body>
+</html>
