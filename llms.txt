@@ -1,12 +1,13 @@
 # Rodrigo Gutiérrez Peña — Mechatronics Engineer & Supply Chain Analyst
 
-> Mechatronics engineer (B.Sc., Tecnológico de Monterrey, expected Dec 2026) and MSc candidate in Logistics & Supply Chain Management (University of Hull, UK, expected Jan 2027). Focus: robotics, industrial automation, computer vision, AI-integrated digital twins and Power BI analytics. Available from January 2027; open to relocation — US (TN-visa eligible) and Europe. Languages: Spanish (native), English (fluent), German (B2), French (B1, certified).
+> Mechatronics engineer (B.Sc., Tecnológico de Monterrey, expected Dec 2026) and MSc candidate in Logistics & Supply Chain Management (University of Hull, UK, expected Dec 2026). Focus: robotics, industrial automation, computer vision, AI-integrated digital twins and Power BI analytics. Available from January 2027; open to relocation — US (TN-visa eligible) and Europe. Languages: Spanish (native), English (fluent), German (B2), French (B1, certified).
 
 - Site: https://www.rodrigogutierrez.info/ (English)
 - Español: https://www.rodrigogutierrez.info/es.html · Français: https://www.rodrigogutierrez.info/fr.html · Deutsch: https://www.rodrigogutierrez.info/de.html
 - Email: rodrigogtz04@gmail.com
 - LinkedIn: https://www.linkedin.com/in/rodrigo-guti%C3%A9rrez-87b02a250/
 - GitHub: https://github.com/Rogupe
+- Privacy notice & terms of use (EN/ES/FR/DE): https://www.rodrigogutierrez.info/legal.html
 - CV (Manufacturing): https://www.rodrigogutierrez.info/cvmanufacturing.pdf
 - CV (Supply Chain): https://www.rodrigogutierrez.info/cvsupplychain.pdf
 
@@ -22,10 +23,10 @@
 ## Education
 
 - B.Sc. Mechatronics Engineering — Tecnológico de Monterrey, Mexico (expected December 2026)
-- M.Sc. Logistics and Supply Chain Management — University of Hull, UK (expected January 2027) — Course Representative; Certificate of Recognition, Hull University Business School
-- Automotive Engineering Program — Steinbeis Transfer Center, Hochschule Esslingen, Germany (February 2025)
+- M.Sc. Logistics and Supply Chain Management — University of Hull, UK (expected December 2026) — Course Representative; Certificate of Recognition, Hull University Business School
+- Automotive Engineering Program — Steinbeis Transfer Center, Hochschule Esslingen, Germany (January 2024)
 
-## Projects (27)
+## Projects (28)
 
 ### Data & Supply Chain
 
@@ -33,6 +34,7 @@
 - NHS Organ Donation — Power BI Analysis (2026, University of Hull — NHSBT coursework): 5-page Power BI report treating organs as the ultimate last-mile logistics problem — 10 years of NHSBT data, cold-chain CIT risk included.
 - Supply Chain Analytics Dashboard — Power BI (Programmatic PBIR) (2026, University of Hull, UK): End-to-end supply chain performance dashboard with the data model and report built programmatically in PBIR / JSON.
 - Import Strategy — Maize Flour into a UK Retail Distribution Centre (2026, University of Hull, UK): End-to-end import strategy into Tesco's Humber DC: sourcing, international routing and UK import compliance.
+- Single-Use Plastic Packaging Strategy — Colgate-Palmolive Sustainability Analysis (2026, University of Hull, UK): Triple-bottom-line critique of Colgate-Palmolive's plastic packaging strategy — Design for Environment, circular economy and reverse logistics, mapped to SDG 12.
 
 ### Industry & Research
 
@@ -71,4 +73,4 @@
 
 ## Skills
 
-CAD & simulation: SolidWorks, Autodesk Fusion 360, Ansys, KUKA.Sim. Automation & controls: KUKA KRC5, Siemens TIA Portal, Raspberry Pi, Arduino, control systems integration. Manufacturing: additive manufacturing, rapid prototyping, laser cutting, photogrammetry / 3D scanning. Data & supply chain: Python (pandas, GRU neural networks), Power BI (incl. programmatic PBIR), DAX, NSGA-II optimisation, SCOR framework, digital twins, MATLAB, C++, Java, Excel.
+CAD & simulation: SolidWorks, Autodesk Fusion 360, Ansys, KUKA.Sim. Automation & controls: KUKA KRC5, Siemens TIA Portal, Raspberry Pi, Arduino, control systems integration. Manufacturing: additive manufacturing, rapid prototyping, laser cutting, photogrammetry / 3D scanning. Data & supply chain: Python (pandas, GRU neural networks), Power BI (incl. programmatic PBIR), DAX, NSGA-II optimisation, SCOR framework, digital twins, import / trade compliance, PRISMA systematic review, sustainability & circular economy, MATLAB, C++, Java, Excel.
