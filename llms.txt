@@ -1,11 +1,11 @@
 # Rodrigo Gutiérrez Peña — Mechatronics Engineer & Supply Chain Analyst
 
-> Mechatronics engineer (B.Sc., Tecnológico de Monterrey, expected Dec 2026) and MSc candidate in Logistics & Supply Chain Management (University of Hull, UK, expected Dec 2026). Focus: robotics, industrial automation, computer vision, AI-integrated digital twins and Power BI analytics. Available from January 2027; open to relocation — US (TN-visa eligible) and Europe. Languages: Spanish (native), English (fluent), German (B2), French (B1, certified).
+> Mechatronics engineer (B.Sc., Tecnológico de Monterrey, expected Dec 2026) and MSc candidate in Logistics & Supply Chain Management (University of Hull, UK, expected Dec 2026). Focus: robotics, industrial automation, computer vision, AI-integrated digital twins and Power BI analytics. Available from January 2027; open to relocation — US (TN-visa eligible) and Europe. Languages: Spanish (native), English (fluent), German (Goethe-Zertifikat B2, speaking and writing modules), French (B1).
 
 - Site: https://www.rodrigogutierrez.info/ (English)
 - Español: https://www.rodrigogutierrez.info/es.html · Français: https://www.rodrigogutierrez.info/fr.html · Deutsch: https://www.rodrigogutierrez.info/de.html
 - Email: rodrigogtz04@gmail.com
-- LinkedIn: https://www.linkedin.com/in/rodrigo-guti%C3%A9rrez-87b02a250/
+- LinkedIn: https://www.linkedin.com/in/rodrigo-gutierrez-pena/
 - GitHub: https://github.com/Rogupe
 - Privacy notice & terms of use (EN/ES/FR/DE): https://www.rodrigogutierrez.info/legal.html
 - CV (Manufacturing): https://www.rodrigogutierrez.info/cvmanufacturing.pdf
@@ -15,10 +15,10 @@
 
 - MSc dissertation: AI-integrated digital twin for an automotive Tier 1 export supply chain — GRU neural-network demand forecasting + NSGA-II multi-objective optimisation, human-in-the-loop; full Python pipeline on 500+ real order records across SCOR blocks; 98.5% baseline delivery performance; Pareto-front trade-off analysis.
 - Design Lead at Green Tech Innovation (GTI): founded the Speed Prototyping team for the XPRIZE Wildfire entry; four flying proof-of-concept drones; technical excellence award at ExpoIngenierías Tec de Monterrey.
-- Engineering intern at Magna CIMS (Tier 1 automotive): validated a 3D-scanning / photogrammetry proof of concept for in-plant quality control.
-- Research assistant at CINVESTAV: RGB-D and point-cloud vision for robotic perception.
+- Tec de Monterrey industry challenge with Magna CIMS (Tier 1 automotive): validated a 3D-scanning / photogrammetry proof of concept for in-plant quality control.
+- Tec de Monterrey research challenge at CINVESTAV: RGB-D and point-cloud vision for robotic perception.
 - 2× World Championship qualifier: VEX U (programmer & electrician) and FIRST Robotics Competition (programming & electrical mentor, Team Blue Ignition).
-- Learned German to B2 in six months, then taught it.
+- Learned German to Goethe-Zertifikat B2 (speaking and writing modules) in six months, then taught it.
 
 ## Education
 
@@ -40,7 +40,7 @@
 
 - 3D Scanning Rig Prototype for Quality Control – Magna CIMS (Apr – Jun 2025, Ramos Arizpe, MX): Point-cloud scanning rig that makes geometric inspection faster and more accessible on a Tier 1 automotive production floor.
 - RGB-D & Point Cloud Vision Systems – Research at CINVESTAV (Feb – Mar 2025, Ramos Arizpe, MX): Computer-vision research on depth data and spatial reconstruction for robotic perception and scene understanding.
-- Team Romeo – Wildfire-Response Drones, Design Lead (GTI / XPRIZE) (Jun 2024 – Aug 2025, Saltillo · Monterrey, MX): Founded and led GTI's Speed Prototyping team: four flying proof-of-concept drones for the XPRIZE Wildfire entry.
+- Team Romeo – Wildfire-Response Drones, Design Lead (GTI / XPRIZE) (Jun 2024 – Aug 2025, Saltillo, MX): Founded and led GTI's Speed Prototyping team: four flying proof-of-concept drones for the XPRIZE Wildfire entry.
 - Automated Gripper Design for KUKA Robotic Arm – GecVac (Sep – Dec 2024, Saltillo, MX): Conceptual and functional gripper prototype for a KUKA arm — simulated in KUKA.Sim, built with additive manufacturing.
 - Automated Transport Cart Concept for Polsa (Aug 2024, Saltillo, MX): SolidWorks-designed automated cart in PTR steel, driven by a Raspberry Pi Pico through gears and chains.
 
@@ -67,8 +67,8 @@
 
 ### Languages & Education
 
-- German – B2 in 6 Months & Teaching Experience (Aug 2024, Saltillo, MX): Reached B2 German in six months, then taught it — proof of fast, deep learning.
-- French – B1 Immersive Program, Voxea Swiss Academy (2019 – 2022, Switzerland (online)): Conversational French built through high school and certified at B1 via an immersive Swiss winter program.
+- German – Goethe-Zertifikat B2 in 6 Months & Teaching Experience (Aug 2024, Saltillo, MX): Reached Goethe-Zertifikat B2 German (speaking and writing modules) in six months, then taught it — proof of fast, deep learning.
+- French – B1 Immersive Program, Voxea Swiss Academy (2019 – 2022, Switzerland (online)): Conversational French built through high school and taken to B1 via an immersive Swiss winter program.
 - Automotive Engineering Course – Steinbeis Transfer Center (STiAE) (Jan 2024, Esslingen, Germany): Specialized automotive engineering training in Germany — vehicle systems, design principles and advanced technologies.
 
 ## Skills
