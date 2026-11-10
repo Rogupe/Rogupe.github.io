@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.rodrigogutierrez.info/</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.rodrigogutierrez.info/"/>
@@ -13,7 +13,7 @@
   </url>
   <url>
     <loc>https://www.rodrigogutierrez.info/es.html</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.rodrigogutierrez.info/"/>
@@ -24,7 +24,7 @@
   </url>
   <url>
     <loc>https://www.rodrigogutierrez.info/fr.html</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.rodrigogutierrez.info/"/>
@@ -35,7 +35,7 @@
   </url>
   <url>
     <loc>https://www.rodrigogutierrez.info/de.html</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.rodrigogutierrez.info/"/>
@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://www.rodrigogutierrez.info/legal.html</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>

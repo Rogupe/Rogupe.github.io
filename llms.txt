@@ -1,6 +1,6 @@
 # Rodrigo Gutiérrez Peña — Mechatronics Engineer & Supply Chain Analyst
 
-> Mechatronics engineer (B.Sc., Tecnológico de Monterrey, expected Dec 2026) and MSc candidate in Logistics & Supply Chain Management (University of Hull, UK, expected Dec 2026). Focus: robotics, industrial automation, computer vision, AI-integrated digital twins and Power BI analytics. Available from January 2027; open to relocation — US (TN-visa eligible) and Europe. Languages: Spanish (native), English (fluent), German (Goethe-Zertifikat B2, speaking and writing modules), French (B1).
+> Mechatronics engineer (B.Sc., Tecnológico de Monterrey, expected Dec 2026) with an MSc in Logistics & Supply Chain Management (University of Hull, UK, completed Nov 2026 with Distinction). Focus: robotics, industrial automation, computer vision, AI-integrated digital twins and Power BI analytics. Available from January 2027; open to relocation — US (TN-visa eligible) and Europe. Languages: Spanish (native), English (fluent), German (Goethe-Zertifikat B2, speaking and writing modules), French (B1).
 
 - Site: https://www.rodrigogutierrez.info/ (English)
 - Español: https://www.rodrigogutierrez.info/es.html · Français: https://www.rodrigogutierrez.info/fr.html · Deutsch: https://www.rodrigogutierrez.info/de.html
@@ -23,7 +23,7 @@
 ## Education
 
 - B.Sc. Mechatronics Engineering — Tecnológico de Monterrey, Mexico (expected December 2026)
-- M.Sc. Logistics and Supply Chain Management — University of Hull, UK (expected December 2026) — Course Representative; Certificate of Recognition, Hull University Business School
+- M.Sc. Logistics and Supply Chain Management — University of Hull, UK (completed November 2026, Distinction) — Course Representative; Certificate of Recognition, Hull University Business School
 - Automotive Engineering Program — Steinbeis Transfer Center, Hochschule Esslingen, Germany (January 2024)
 
 ## Projects (28)
